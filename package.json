@@ -20,13 +20,13 @@
     "theme-butterfly",
     "plugins"
   ],
-  "author": "fe-leejw",
+  "author": "fe_leejw",
   "license": "Apache-2.0",
   "dependencies": {
     "pug": "^3.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jia0213/hexo-butterfly-posts-swiper"
+    "url": "https://github.com/jia0213/hexo-butterfly-posts-swiper.git"
   }
 }
