@@ -1,0 +1,32 @@
+{
+  "name": "hexo-butterfly-posts-swiper",
+  "version": "0.0.1",
+  "description": "A swiper card plugin of posts for theme-butterfly",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "keywords": [
+    "hexo",
+    "posts-swiper",
+    "aside",
+    "theme-butterfly",
+    "plugins"
+  ],
+  "author": "fe-leejw",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "pug": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jia0213/hexo-butterfly-posts-swiper"
+  }
+}
