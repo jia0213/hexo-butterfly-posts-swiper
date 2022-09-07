@@ -20,6 +20,7 @@ posts_swiper:
   priority: 7 #过滤器优先权
   limit: 6 # 默认6展示项目中前六
   mobile: false # 默认false
+  img404: # 图片失联之后显示的图片
   enable_page: all # 应用页面
   exclude:
     # - /posts/
