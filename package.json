@@ -1,6 +1,6 @@
 {
   "name": "hexo-butterfly-posts-swiper",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A swiper card plugin of posts for theme-butterfly",
   "main": "index.js",
   "scripts": {

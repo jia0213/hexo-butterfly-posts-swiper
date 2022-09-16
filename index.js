@@ -1,7 +1,7 @@
 'use strict'
 // 全局声明插件代号
 const pluginName = 'posts_swiper';
-const version = '0.0.1'; // 初学，进行一版尝试
+const version = '0.0.5'; // 初学，进行一版尝试
 // 全局声明依赖
 const pug = require('pug')
 const path = require('path')
@@ -83,7 +83,7 @@ hexo.extend.generator.register('get_posts', function (locals) {
     let effectArr = ['fromLeft', 'fromRight', 'fromTop', 'fadeIn','fromBottom'] ;
     let dom = '';
     postArr.slice(0,data.limit+1).map(v=>{
-      console.log(v);
+      // console.log(v);
       let effect = effectArr[Math.floor(Math.random()*effectArr.length)];
       let bg = `background-image: linear-gradient(to right, ${randomColor()}, ${randomColor()});`
       let srcHolder = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QDeRXhpZgAASUkqAAgAAAAGABIBAwABAAAAAQAAABoBBQABAAAAVgAAABsBBQABAAAAXgAAACgBAwABAAAAAgAAABMCAwABAAAAAQAAAGmHBAABAAAAZgAAAAAAAABIAAAAAQAAAEgAAAABAAAABwAAkAcABAAAADAyMTABkQcABAAAAAECAwCGkgcAFgAAAMAAAAAAoAcABAAAADAxMDABoAMAAQAAAP//AAACoAQAAQAAACgAAAADoAQAAQAAACgAAAAAAAAAQVNDSUkAAABQaWNzdW0gSUQ6IDk1Of/bAEMACAYGBwYFCAcHBwkJCAoMFA0MCwsMGRITDxQdGh8eHRocHCAkLicgIiwjHBwoNyksMDE0NDQfJzk9ODI8LjM0Mv/bAEMBCQkJDAsMGA0NGDIhHCEyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMv/CABEIACgAKAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAABAUDAQb/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAfCas0Fg99NISYPBZ3R2LcV1KamnCxLoJqwCJAL/AP/EACAQAAICAQMFAAAAAAAAAAAAAAECAAMSBBETEBQhIiP/2gAIAQEAAQUCx8NUVXBoEJ6VAbVKkspCLkSLQsTet2UT5TiRLNRiTpzO8DO7F6uZ1qudWJsJmfqtlmTXbuSZ/8QAGREAAgMBAAAAAAAAAAAAAAAAABEBECAh/9oACAEDAQE/AVcDOY//xAAWEQADAAAAAAAAAAAAAAAAAAABECD/2gAIAQIBAT8BZr//xAAmEAACAQMCBAcAAAAAAAAAAAAAARECEiExUQMQMkETQnGBobHB/9oACAEBAAY/ApE9zR87apnYyngcPNR4VslNqFTRDb6j7ewqtcFy8uuNSUoncvtSW7KrUrdjt6ISqpl9x8SHPxJ+Ij3OpkvMLBE4P//EAB0QAQADAAMBAQEAAAAAAAAAAAEAESExQVFxgRD/2gAIAQEAAT8htC0Q+CCNF3yDqHH8bqB4F7CbYzZ1NQPaIgKOUNjwsPBnMupaK7/YO2jkyiraFqNZfsuLgUBpKwrxEtqxqdQECQAoHcZ+0omAq51cDmbzEWPQ/CGHEGBWOaJTiohgjRup/9oADAMBAAIAAwAAABACIxxYEL3z/8QAGhEBAAIDAQAAAAAAAAAAAAAAAQARECExQf/aAAgBAwEBPxAshce0YrdsSHPYL243j//EABkRAAIDAQAAAAAAAAAAAAAAAAABECAhMf/aAAgBAgEBPxCWF1m0/8QAHxABAQADAAMBAQEBAAAAAAAAAREAITFBUWFxkcHh/9oACAEBAAE/EDvE0ftwIp1ErcBuNgG1xoIdXWJng/NMceMaRkrsn1/MmlyisejrmLG8IkC2P3mOlICEm+X3myjUjs9XlMRSaepq99zeOoxl1ISx5+5YlmYU9devTj03YTo108PpMOVE4iLZfN1nk06PP9+5PQyKP4FOrrHfjyj0N8/8xghxoAfj0njIxhgQmnzFiSGZu4JJGmOrJf5kASIcMl4ZTP/Z';
@@ -104,7 +104,7 @@ hexo.extend.generator.register('get_posts', function (locals) {
       dom += `</div>`;
     })
     var _setting = JSON.stringify(data.setting);
-    var user_info_js = `<script data-pjax script-label="${pluginName}">
+    var user_info_js = `<script script-label="${pluginName}">
             function ${pluginName}_injector_config(){
               var dom = \`${dom}\`;
               var mobile = ${data.mobile};
