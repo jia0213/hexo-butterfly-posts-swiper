@@ -1,6 +1,6 @@
 # hexo-butterfly-posts-swiper
 
-给`hexo-theme-butterfly`添加 [侧边栏文章轮播图](https://akilar.top/posts/4e39cf4a/)
+给`hexo-theme-butterfly`添加 [侧边栏文章轮播图](https://blog.lovelee.cn/lee/40059.html)
 
 # 安装
 
